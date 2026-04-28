@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<title>Mentions légales — Louise Messiant, Ostéopathe D.O.</title>
+<meta name="description" content="Mentions légales du site de Louise Messiant, ostéopathe D.O. à Seclin et Thumeries.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lustria&family=Open+Sauce+One:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lustria&family=Open+Sauce+One:wght@300;400;500&display=swap"></noscript>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --vert:#95A58D;
+  --vert-l:#B6B7A2;
+  --vert-f:#85876B;
+  --vert-pale:#BECED1;
+  --creme:#F5F0E8;
+  --creme-2:#D8CCB5;
+  --blanc:#FFFFFF;
+  --texte:#2B3A28;
+  --gris:#8E9F9E;
+  --gris-l:#B6B7A2;
+  --bord:rgba(142,159,158,.2);
+  --bord2:rgba(0,0,0,.07);
+  --sh:0 2px 24px rgba(133,135,107,.1);
+  --sh-md:0 8px 48px rgba(133,135,107,.15);
+}
+html{scroll-behavior:smooth;}
+body{font-family:'Open Sauce One',sans-serif;font-weight:300;background:var(--creme);color:var(--texte);overflow-x:hidden;}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;padding:0 60px;display:flex;align-items:center;justify-content:space-between;background:rgba(245,240,232,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--bord);}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;}
+.logo-text{font-family:'Lustria',serif;font-size:18px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--texte);}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center;}
+.nav-links a{font-size:13px;font-weight:400;letter-spacing:.06em;color:var(--gris);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:var(--vert-f);}
+.btn-rdv{background:var(--vert);color:var(--blanc);border:none;padding:11px 24px;border-radius:50px;font-size:13px;font-weight:500;font-family:inherit;cursor:pointer;text-decoration:none;transition:background .2s;}
+.btn-rdv:hover{background:var(--vert-f);}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;margin-right:-8px;}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--texte);border-radius:2px;transition:transform .3s,opacity .3s;}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-burger.open span:nth-child(2){opacity:0;}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+.nav-drawer{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(245,240,232,.98);backdrop-filter:blur(24px);border-bottom:1px solid var(--bord);padding:20px 20px 28px;z-index:98;transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;}
+.nav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
+.nav-drawer ul{list-style:none;display:flex;flex-direction:column;gap:0;}
+.nav-drawer ul li a{display:block;padding:14px 4px;font-size:15px;color:var(--texte);text-decoration:none;border-bottom:1px solid var(--bord2);letter-spacing:.03em;transition:color .2s;}
+.nav-drawer ul li:last-child a{border-bottom:none;}
+.nav-drawer ul li a:hover{color:var(--vert-f);}
+.nav-drawer .drawer-rdv{display:block;margin-top:20px;text-align:center;background:var(--vert);color:var(--blanc);padding:14px 24px;border-radius:50px;font-size:14px;font-weight:500;text-decoration:none;transition:background .2s;}
+.nav-drawer .drawer-rdv:hover{background:var(--vert-f);}
+
+/* ─── HERO PAGE ─── */
+.page-hero{padding:140px 60px 64px;background:linear-gradient(135deg,var(--creme) 55%,var(--vert-pale) 100%);border-bottom:1px solid var(--bord);}
+.page-hero-back{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--gris);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;margin-bottom:24px;transition:color .2s;}
+.page-hero-back:hover{color:var(--vert-f);}
+.page-hero-back svg{transition:transform .2s;}
+.page-hero-back:hover svg{transform:translateX(-3px);}
+.page-hero h1{font-family:'Lustria',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--texte);line-height:1.1;margin-bottom:12px;}
+.page-hero h1 em{font-style:italic;color:var(--vert);}
+.page-hero-sub{font-size:14px;color:var(--gris);letter-spacing:.05em;}
+
+/* ─── CONTENU ─── */
+.ml-wrap{max-width:820px;margin:0 auto;padding:72px 60px 96px;}
+.ml-section{margin-bottom:56px;}
+.ml-section:last-child{margin-bottom:0;}
+.ml-tag{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--vert);font-weight:500;margin-bottom:8px;}
+.ml-title{font-family:'Lustria',serif;font-size:26px;font-weight:300;color:var(--texte);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--bord);}
+.ml-text{font-size:14px;line-height:1.9;color:var(--gris);margin-bottom:14px;}
+.ml-text:last-child{margin-bottom:0;}
+.ml-text strong{color:var(--texte);font-weight:500;}
+.ml-text a{color:var(--vert-f);text-decoration:none;}
+.ml-text a:hover{text-decoration:underline;}
+.ml-list{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:14px;}
+.ml-list li{font-size:14px;line-height:1.8;color:var(--gris);padding-left:18px;position:relative;}
+.ml-list li::before{content:'—';position:absolute;left:0;color:var(--vert-l);}
+
+/* ─── ENCADRÉ SANTÉ ─── */
+.ml-sante{background:var(--vert-pale);border:1px solid rgba(142,159,158,.3);border-left:3px solid var(--vert);border-radius:16px;padding:28px 32px;margin-bottom:56px;}
+.ml-sante-title{font-family:'Lustria',serif;font-size:18px;color:var(--texte);margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.ml-sante-text{font-size:14px;line-height:1.9;color:var(--texte);margin-bottom:10px;}
+.ml-sante-text:last-child{margin-bottom:0;}
+.ml-sante-text strong{color:var(--vert-f);}
+
+/* ─── TABLE DONNÉES ─── */
+.ml-data-grid{display:grid;grid-template-columns:1fr 2fr;gap:0;border:1px solid var(--bord);border-radius:12px;overflow:hidden;margin-bottom:14px;}
+.ml-data-row{display:contents;}
+.ml-data-key{background:var(--creme-2);padding:12px 16px;font-size:13px;font-weight:500;color:var(--texte);border-bottom:1px solid var(--bord);}
+.ml-data-val{background:var(--blanc);padding:12px 16px;font-size:13px;color:var(--gris);border-bottom:1px solid var(--bord);}
+.ml-data-key:last-of-type,.ml-data-val:last-of-type{border-bottom:none;}
+
+/* ─── FOOTER ─── */
+footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px;}
+.footer-logo{font-family:'Lustria',serif;font-size:20px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:10px;}
+.footer-logo span{color:var(--vert-l);}
+.footer-tagline{font-size:13px;line-height:1.7;margin-bottom:20px;}
+.footer-social{display:flex;gap:12px;}
+.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);text-decoration:none;font-size:14px;transition:all .2s;}
+.social-btn:hover{border-color:var(--vert-l);color:var(--vert-l);}
+.footer-col-title{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px;}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:var(--vert-l);}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-copy{font-size:11px;letter-spacing:.08em;}
+.footer-legal{font-size:11px;}
+.footer-legal a{color:rgba(255,255,255,.35);text-decoration:none;}
+.footer-legal a:hover{color:rgba(255,255,255,.6);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .nav-burger{display:flex;}
+  .nav-drawer{display:block;}
+  .page-hero{padding:100px 20px 48px;}
+  .ml-wrap{padding:48px 20px 72px;}
+  .ml-data-grid{grid-template-columns:1fr;}
+  .ml-data-key{border-bottom:none;padding-bottom:4px;}
+  footer{padding:40px 20px 32px;}
+  .footer-grid{grid-template-columns:1fr;gap:28px;}
+  .footer-bottom{flex-direction:column;text-align:center;}
+}
+@media(max-width:480px){
+  nav{height:64px;}
+  .nav-drawer{top:64px;}
+  .ml-sante{padding:20px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo">
+    <img src="/assets/logo.png" alt="Logo LM Louise Messiant" class="logo-icon" style="border-radius:8px;">
+    <span class="logo-text">Louise <span style="color:var(--vert)">Messiant</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#apropos">À propos</a></li>
+    <li><a href="/#expertises">Expertises</a></li>
+    <li><a href="/#infos">Infos pratiques</a></li>
+    <li><a href="/#avis">Avis</a></li>
+    <li><a href="/#articles">Articles</a></li>
+    <li><a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="btn-rdv">Prendre RDV</a></li>
+  </ul>
+  <button class="nav-burger" id="navBurger" aria-label="Ouvrir le menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<nav class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <ul>
+    <li><a href="/#apropos">À propos</a></li>
+    <li><a href="/#expertises">Expertises</a></li>
+    <li><a href="/#infos">Infos pratiques</a></li>
+    <li><a href="/#avis">Avis</a></li>
+    <li><a href="/#articles">Articles</a></li>
+  </ul>
+  <a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="drawer-rdv">Prendre rendez-vous</a>
+</nav>
+
+<!-- EN-TÊTE -->
+<div class="page-hero">
+  <div style="max-width:820px;margin:0 auto;">
+    <a href="/" class="page-hero-back">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Retour au site
+    </a>
+    <h1>Mentions <em>légales</em></h1>
+    <p class="page-hero-sub">Dernière mise à jour : avril 2026</p>
+  </div>
+</div>
+
+<!-- CONTENU -->
+<main class="ml-wrap">
+
+  <!-- AVERTISSEMENT SANTÉ -->
+  <div class="ml-sante">
+    <div class="ml-sante-title">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--vert);flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Avertissement sanitaire important
+    </div>
+    <p class="ml-sante-text">Les articles, conseils et informations publiés sur ce site sont fournis à titre <strong>purement informatif et éducatif</strong>. Ils ne constituent en aucun cas un diagnostic médical, une prescription, ni un avis thérapeutique personnalisé.</p>
+    <p class="ml-sante-text">Tout contenu relatif à la santé publié sur ce site ne saurait remplacer une <strong>consultation avec un professionnel de santé qualifié</strong>. En cas de douleur, symptôme persistant ou situation d'urgence, consultez un médecin ou appelez le <strong>15 (SAMU), le 18 (pompiers) ou le 112</strong>.</p>
+    <p class="ml-sante-text">L'éditrice du site, en sa qualité d'ostéopathe D.O., exerce dans le strict cadre légal défini par le décret n° 2007-435 du 25 mars 2007 relatif aux actes et aux conditions d'exercice de l'ostéopathie en France. L'ostéopathie ne se substitue pas à la médecine et ne dispense pas d'un suivi médical.</p>
+  </div>
+
+  <!-- 1. ÉDITEUR -->
+  <div class="ml-section">
+    <p class="ml-tag">01</p>
+    <h2 class="ml-title">Éditeur du site</h2>
+    <div class="ml-data-grid">
+      <div class="ml-data-key">Nom</div>
+      <div class="ml-data-val">Louise Messiant</div>
+      <div class="ml-data-key">Qualité</div>
+      <div class="ml-data-val">Ostéopathe D.O. — praticienne libérale</div>
+      <div class="ml-data-key">Diplôme</div>
+      <div class="ml-data-val">Diplôme d'Ostéopathe (D.O.) — Institut Supérieur d'Ostéopathie de Lille (InSO), 2025</div>
+      <div class="ml-data-key">N° ADELI</div>
+      <div class="ml-data-val">À compléter</div>
+      <div class="ml-data-key">SIRET</div>
+      <div class="ml-data-val">À compléter</div>
+      <div class="ml-data-key">Cabinet principal</div>
+      <div class="ml-data-val">40 Rue Roger Bouvry, 59113 Seclin</div>
+      <div class="ml-data-key">Cabinet secondaire</div>
+      <div class="ml-data-val">Place Carlen, 59639 Thumeries</div>
+      <div class="ml-data-key">Téléphone</div>
+      <div class="ml-data-val"><a href="tel:0766012235">07 66 01 22 35</a></div>
+    </div>
+    <p class="ml-text">L'exercice de l'ostéopathie en France est encadré par le <strong>décret n° 2007-435 du 25 mars 2007</strong> et subordonné à l'obtention d'un diplôme reconnu par l'État, à l'enregistrement auprès de l'Agence Régionale de Santé (ARS) et à l'inscription au répertoire ADELI.</p>
+  </div>
+
+  <!-- 2. HÉBERGEUR -->
+  <div class="ml-section">
+    <p class="ml-tag">02</p>
+    <h2 class="ml-title">Hébergeur</h2>
+    <div class="ml-data-grid">
+      <div class="ml-data-key">Société</div>
+      <div class="ml-data-val">Vercel Inc.</div>
+      <div class="ml-data-key">Adresse</div>
+      <div class="ml-data-val">340 Pine Street, Suite 701 — San Francisco, CA 94104, États-Unis</div>
+      <div class="ml-data-key">Site</div>
+      <div class="ml-data-val"><a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></div>
+    </div>
+  </div>
+
+  <!-- 3. PROPRIÉTÉ INTELLECTUELLE -->
+  <div class="ml-section">
+    <p class="ml-tag">03</p>
+    <h2 class="ml-title">Propriété intellectuelle</h2>
+    <p class="ml-text">L'ensemble des éléments constituant ce site (textes, photographies, logo, charte graphique) est la propriété exclusive de Louise Messiant, sauf mention contraire. Toute reproduction, représentation, modification ou exploitation, totale ou partielle, est interdite sans autorisation écrite préalable.</p>
+    <p class="ml-text">Les photographies publiées sur ce site sont la propriété de leurs auteurs respectifs et ne peuvent être reproduites sans leur consentement.</p>
+  </div>
+
+  <!-- 4. CONTENU ÉDITORIAL & ARTICLES -->
+  <div class="ml-section">
+    <p class="ml-tag">04</p>
+    <h2 class="ml-title">Contenu éditorial et articles de blog</h2>
+    <p class="ml-text">Les articles publiés sur ce site ont pour vocation de <strong>sensibiliser et informer le grand public</strong> sur des thématiques liées à l'ostéopathie et au bien-être. Ils sont rédigés par Louise Messiant à titre personnel, en dehors de tout acte de soin.</p>
+    <p class="ml-text">Conformément aux règles déontologiques encadrant la communication des professionnels de santé (loi n° 2002-303 du 4 mars 2002 relative aux droits des malades), les articles publiés :</p>
+    <ul class="ml-list">
+      <li>Ne constituent pas un acte de téléconsultation ou de télémédecine</li>
+      <li>Ne permettent pas d'établir un diagnostic à distance</li>
+      <li>Ne remplacent pas une consultation en cabinet</li>
+      <li>Ne constituent pas une prescription ou une recommandation thérapeutique personnalisée</li>
+    </ul>
+    <p class="ml-text">L'éditrice se réserve le droit de modifier ou supprimer tout contenu à tout moment, sans préavis. Les informations publiées peuvent évoluer avec les avancées scientifiques et ne sauraient engager la responsabilité de l'éditrice si elles venaient à être modifiées postérieurement.</p>
+  </div>
+
+  <!-- 5. RESPONSABILITÉ -->
+  <div class="ml-section">
+    <p class="ml-tag">05</p>
+    <h2 class="ml-title">Limitation de responsabilité</h2>
+    <p class="ml-text">Louise Messiant s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. Cependant, elle ne saurait garantir l'exactitude, la complétude ou l'actualité des informations publiées, et décline toute responsabilité pour :</p>
+    <ul class="ml-list">
+      <li>Toute imprécision, inexactitude ou omission portant sur des informations disponibles sur le site</li>
+      <li>Tout dommage résultant d'une utilisation des informations sans consultation préalable d'un professionnel de santé</li>
+      <li>Tout dommage résultant d'une intrusion frauduleuse d'un tiers ou d'une indisponibilité du site</li>
+      <li>Tout contenu des sites tiers vers lesquels ce site renvoie via des liens hypertextes</li>
+    </ul>
+  </div>
+
+  <!-- 6. DONNÉES PERSONNELLES -->
+  <div class="ml-section">
+    <p class="ml-tag">06</p>
+    <h2 class="ml-title">Données personnelles & RGPD</h2>
+    <p class="ml-text">Ce site ne collecte aucune donnée personnelle directement. La prise de rendez-vous est assurée via la plateforme <strong>Doctolib</strong>, qui agit en qualité de responsable de traitement pour les données recueillies dans ce cadre. Nous vous invitons à consulter la <a href="https://www.doctolib.fr/politique-de-confidentialite" target="_blank" rel="noopener">politique de confidentialité de Doctolib</a>.</p>
+    <p class="ml-text">Dans le cadre de l'exercice libéral, Louise Messiant est amenée à traiter des données de santé à caractère personnel (nom, coordonnées, motif de consultation, antécédents médicaux). Ces données sont :</p>
+    <ul class="ml-list">
+      <li>Collectées avec votre consentement explicite, lors de la prise en charge</li>
+      <li>Conservées dans le respect du secret professionnel (article L. 1110-4 du Code de la santé publique)</li>
+      <li>Accessibles uniquement à la praticienne, sauf obligation légale contraire</li>
+      <li>Conservées pendant une durée maximale de 5 ans après la dernière consultation</li>
+    </ul>
+    <p class="ml-text">Conformément au <strong>Règlement Général sur la Protection des Données (RGPD — UE 2016/679)</strong> et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : <a href="tel:0766012235">07 66 01 22 35</a>.</p>
+  </div>
+
+  <!-- 7. COOKIES -->
+  <div class="ml-section">
+    <p class="ml-tag">07</p>
+    <h2 class="ml-title">Cookies</h2>
+    <p class="ml-text">Ce site n'utilise pas de cookies publicitaires ni de traceurs tiers. Des cookies techniques strictement nécessaires au fonctionnement du site peuvent être déposés. Ils ne nécessitent pas de consentement préalable (directive ePrivacy).</p>
+    <p class="ml-text">Les polices de caractères sont chargées depuis Google Fonts, ce qui peut impliquer une transmission de votre adresse IP aux serveurs de Google. Vous pouvez configurer votre navigateur pour bloquer ces requêtes.</p>
+  </div>
+
+  <!-- 8. LIENS HYPERTEXTES -->
+  <div class="ml-section">
+    <p class="ml-tag">08</p>
+    <h2 class="ml-title">Liens hypertextes</h2>
+    <p class="ml-text">Ce site contient des liens vers des sites tiers (Doctolib, Google Maps, réseaux sociaux). Ces liens sont fournis à titre informatif. Louise Messiant n'exerce aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant aux informations qui y sont publiées.</p>
+    <p class="ml-text">Tout lien hypertexte pointant vers ce site doit faire l'objet d'une autorisation préalable écrite de l'éditrice.</p>
+  </div>
+
+  <!-- 9. DROIT APPLICABLE -->
+  <div class="ml-section">
+    <p class="ml-tag">09</p>
+    <h2 class="ml-title">Droit applicable</h2>
+    <p class="ml-text">Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents. Ce site est conforme à la loi n° 2004-575 du 21 juin 2004 pour la Confiance dans l'Économie Numérique (LCEN).</p>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Louise <span>Messiant</span></div>
+      <p class="footer-tagline">Ostéopathe D.O. à Seclin et Thumeries.<br>Approche globale, douce et personnalisée.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/p/Louise-Messiant-Ost%C3%A9opathe-DO-61578897796859/" target="_blank" rel="noopener" class="social-btn" title="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/messiant.osteo/?hl=fr" target="_blank" rel="noopener" class="social-btn" title="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/louise-messiant-8a71783a7/" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="social-btn" title="Doctolib">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Navigation</div>
+      <ul class="footer-links">
+        <li><a href="/#apropos">À propos</a></li>
+        <li><a href="/#expertises">Expertises</a></li>
+        <li><a href="/#infos">Infos pratiques</a></li>
+        <li><a href="/#articles">Articles</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="tel:0766012235">07 66 01 22 35</a></li>
+        <li><a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener">Prendre RDV (Doctolib)</a></li>
+        <li><a href="https://www.instagram.com/messiant.osteo/?hl=fr" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="/#infos">Cabinets</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Louise Messiant · Ostéopathe D.O.</p>
+    <div class="footer-legal">
+      <a href="/mentions-legales.html">Mentions légales</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const burger = document.getElementById('navBurger');
+const drawer = document.getElementById('navDrawer');
+function closeDrawer(){
+  burger.classList.remove('open');
+  drawer.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  drawer.setAttribute('aria-hidden','true');
+}
+burger.addEventListener('click', () => {
+  const isOpen = drawer.classList.toggle('open');
+  burger.classList.toggle('open');
+  burger.setAttribute('aria-expanded', isOpen);
+  drawer.setAttribute('aria-hidden', !isOpen);
+});
+drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+document.addEventListener('click', e => {
+  if(!burger.contains(e.target) && !drawer.contains(e.target)) closeDrawer();
+});
+</script>
+</body>
+</html>
