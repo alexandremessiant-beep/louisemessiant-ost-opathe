@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales.html
+
+Sitemap: https://louisemessiant-osteopathe.fr/sitemap.xml
