@@ -246,28 +246,7 @@ footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px
 .nav-burger.open span:nth-child(2){opacity:0;}
 .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
 .nav-overlay{display:none;}
-.nav-drawer{
-  display:none;
-  position:fixed;
-  top:72px;left:0;right:0;bottom:0;
-  background-color:#F5F0E8;
-  z-index:99;
-  overflow-y:auto;
-  -webkit-overflow-scrolling:touch;
-  will-change:transform;
-  visibility:hidden;
-  -webkit-transform:translate3d(0,-110%,0);
-  transform:translate3d(0,-110%,0);
-  -webkit-transition:-webkit-transform .32s cubic-bezier(.4,0,.2,1),visibility .32s;
-  transition:transform .32s cubic-bezier(.4,0,.2,1),visibility .32s;
-  pointer-events:none;
-}
-.nav-drawer.open{
-  -webkit-transform:translate3d(0,0,0);
-  transform:translate3d(0,0,0);
-  visibility:visible;
-  pointer-events:all;
-}
+.nav-drawer{display:none;}
 .nav-drawer-inner{padding:32px 28px 48px;}
 .nav-drawer ul{list-style:none;display:flex;flex-direction:column;gap:0;}
 .nav-drawer ul li a{display:block;padding:18px 0;font-size:22px;font-family:'Lustria',serif;font-weight:400;color:#2B3A28;text-decoration:none;border-bottom:1px solid rgba(142,159,158,.2);letter-spacing:.02em;transition:color .2s;}
@@ -292,7 +271,30 @@ body.menu-open .nav-mobile-rdv{display:none!important;}
   nav{padding:0 20px;}
   .nav-links{display:none;}
   .nav-burger{display:flex;}
-  .nav-drawer{display:block;}
+  .nav-drawer{
+    display:block;
+    position:fixed;
+    top:72px;
+    left:0;
+    right:0;
+    height:calc(100vh - 72px);
+    background-color:#F5F0E8;
+    z-index:99;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    will-change:transform;
+    visibility:hidden;
+    -webkit-transform:translate3d(0,-110%,0);
+    transform:translate3d(0,-110%,0);
+    transition:transform .3s ease,visibility .3s;
+    pointer-events:none;
+  }
+  .nav-drawer.open{
+    -webkit-transform:translate3d(0,0,0);
+    transform:translate3d(0,0,0);
+    visibility:visible;
+    pointer-events:all;
+  }
 
   /* Sections */
   section{padding:56px 20px;}
@@ -337,7 +339,7 @@ body.menu-open .nav-mobile-rdv{display:none!important;}
 }
 @media(max-width:480px){
   nav{height:64px;}
-  .nav-drawer{top:64px;}
+  .nav-drawer{top:64px;height:calc(100vh - 64px);}
   .nav-drawer-inner{padding:24px 20px 40px;}
   .logo-text{font-size:15px;}
   .hero{padding:84px 16px 40px;}
