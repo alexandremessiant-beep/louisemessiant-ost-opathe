@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="/assets/favicon.png">
+<title>Page introuvable — Louise Messiant, Ostéopathe D.O.</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lustria&family=Open+Sauce+One:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lustria&family=Open+Sauce+One:wght@300;400;500&display=swap"></noscript>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --vert:#95A58D;
+  --vert-l:#B6B7A2;
+  --vert-f:#85876B;
+  --vert-pale:#BECED1;
+  --creme:#F5F0E8;
+  --creme-2:#D8CCB5;
+  --blanc:#FFFFFF;
+  --texte:#2B3A28;
+  --gris:#8E9F9E;
+  --gris-l:#B6B7A2;
+  --bord:rgba(142,159,158,.2);
+  --sh-md:0 8px 48px rgba(133,135,107,.15);
+}
+html,body{height:100%;}
+body{font-family:'Open Sauce One',sans-serif;font-weight:300;background:var(--creme);color:var(--texte);display:flex;flex-direction:column;}
+
+/* ─── NAV ─── */
+nav{height:72px;padding:0 60px;display:flex;align-items:center;justify-content:space-between;background:rgba(245,240,232,.95);backdrop-filter:blur(24px);border-bottom:1px solid var(--bord);}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-icon{width:38px;height:38px;border-radius:8px;}
+.logo-text{font-family:'Lustria',serif;font-size:18px;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--texte);}
+
+/* ─── 404 ─── */
+.page-404{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;position:relative;overflow:hidden;}
+.deco{position:absolute;border-radius:50%;pointer-events:none;}
+.deco-1{width:500px;height:500px;background:radial-gradient(circle,rgba(190,206,209,.22) 0%,transparent 70%);top:-100px;right:-100px;}
+.deco-2{width:360px;height:360px;background:radial-gradient(circle,rgba(133,135,107,.1) 0%,transparent 70%);bottom:-80px;left:-80px;}
+.content-404{text-align:center;position:relative;z-index:1;max-width:520px;}
+.num-404{font-family:'Lustria',serif;font-size:clamp(100px,20vw,160px);font-weight:300;line-height:1;color:var(--vert-pale);letter-spacing:-.02em;margin-bottom:-16px;}
+.title-404{font-family:'Lustria',serif;font-size:clamp(28px,5vw,40px);font-weight:300;color:var(--texte);line-height:1.2;margin-bottom:16px;}
+.title-404 em{font-style:italic;color:var(--vert);}
+.desc-404{font-size:15px;line-height:1.85;color:var(--gris);margin-bottom:40px;}
+.actions-404{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-home{background:var(--vert);color:#fff;border:none;padding:14px 28px;border-radius:50px;font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;}
+.btn-home:hover{background:var(--vert-f);transform:translateY(-2px);box-shadow:var(--sh-md);}
+.btn-rdv-404{background:transparent;color:var(--texte);border:1px solid var(--bord);padding:13px 24px;border-radius:50px;font-size:14px;font-family:inherit;cursor:pointer;text-decoration:none;transition:all .2s;}
+.btn-rdv-404:hover{border-color:var(--vert);color:var(--vert-f);}
+.links-404{margin-top:48px;padding-top:32px;border-top:1px solid var(--bord);display:flex;gap:24px;justify-content:center;flex-wrap:wrap;}
+.links-404 a{font-size:13px;color:var(--gris-l);text-decoration:none;transition:color .2s;letter-spacing:.04em;}
+.links-404 a:hover{color:var(--vert-f);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:768px){
+  nav{padding:0 20px;}
+  .logo-text{font-size:15px;}
+  .page-404{padding:40px 20px;}
+  .actions-404{flex-direction:column;align-items:center;}
+  .btn-home,.btn-rdv-404{width:100%;justify-content:center;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <img src="/assets/logo.png" alt="Louise Messiant Ostéopathe" class="logo-icon">
+    <span class="logo-text">Louise <span style="color:var(--vert)">Messiant</span></span>
+  </a>
+</nav>
+
+<div class="page-404">
+  <div class="deco deco-1"></div>
+  <div class="deco deco-2"></div>
+  <div class="content-404">
+    <div class="num-404">404</div>
+    <h1 class="title-404">Page <em>introuvable</em></h1>
+    <p class="desc-404">La page que vous cherchez n'existe pas ou a été déplacée. Revenez à l'accueil pour retrouver toutes les informations sur les consultations.</p>
+    <div class="actions-404">
+      <a href="/" class="btn-home">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Retour à l'accueil
+      </a>
+      <a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="btn-rdv-404">Prendre rendez-vous</a>
+    </div>
+    <div class="links-404">
+      <a href="/#apropos">À propos</a>
+      <a href="/#expertises">Expertises</a>
+      <a href="/#infos">Infos pratiques</a>
+      <a href="/#avis">Avis</a>
+      <a href="tel:0766012235">07 66 01 22 35</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
