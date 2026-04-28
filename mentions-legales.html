@@ -54,16 +54,26 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;height:72px;padding:0 60px;d
 .nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
 .nav-burger.open span:nth-child(2){opacity:0;}
 .nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
-.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:97;opacity:0;pointer-events:none;transition:opacity .25s;}
-.nav-overlay.open{opacity:1;pointer-events:all;}
-.nav-drawer{display:none;position:fixed;top:72px;left:0;right:0;background:var(--creme);border-bottom:1px solid var(--bord);padding:20px 20px 28px;z-index:99;transform:translateY(-8px);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;}
-.nav-drawer.open{transform:translateY(0);opacity:1;pointer-events:all;}
+.nav-overlay{display:none;}
+.nav-drawer{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background-color:#F5F0E8;
+  z-index:200;
+  padding-top:72px;
+  overflow-y:auto;
+  transform:translateY(-100%);
+  transition:transform .32s cubic-bezier(.4,0,.2,1);
+}
+.nav-drawer.open{transform:translateY(0);}
+.nav-drawer-inner{padding:32px 28px 48px;}
 .nav-drawer ul{list-style:none;display:flex;flex-direction:column;gap:0;}
-.nav-drawer ul li a{display:block;padding:15px 4px;font-size:16px;color:var(--texte);text-decoration:none;border-bottom:1px solid var(--bord2);letter-spacing:.03em;transition:color .2s;}
+.nav-drawer ul li a{display:block;padding:18px 0;font-size:22px;font-family:'Lustria',serif;font-weight:400;color:#2B3A28;text-decoration:none;border-bottom:1px solid rgba(142,159,158,.2);letter-spacing:.02em;transition:color .2s;}
 .nav-drawer ul li:last-child a{border-bottom:none;}
-.nav-drawer ul li a:hover{color:var(--vert-f);}
-.nav-drawer .drawer-rdv{display:block;margin-top:20px;text-align:center;background:var(--vert);color:#fff;padding:15px 24px;border-radius:50px;font-size:15px;font-weight:500;text-decoration:none;transition:background .2s;}
-.nav-drawer .drawer-rdv:hover{background:var(--vert-f);}
+.nav-drawer ul li a:active{color:#85876B;}
+.nav-drawer .drawer-rdv{display:block;margin-top:32px;text-align:center;background-color:#95A58D;color:#ffffff;padding:16px 24px;border-radius:50px;font-size:16px;font-weight:500;text-decoration:none;}
+body.menu-open{overflow:hidden;}
 
 /* ─── HERO PAGE ─── */
 .page-hero{padding:140px 60px 64px;background:linear-gradient(135deg,var(--creme) 55%,var(--vert-pale) 100%);border-bottom:1px solid var(--bord);}
@@ -129,7 +139,6 @@ footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px
   .nav-links{display:none;}
   .nav-burger{display:flex;}
   .nav-drawer{display:block;}
-  .nav-overlay{display:block;}
   .page-hero{padding:100px 20px 48px;}
   .ml-wrap{padding:48px 20px 72px;}
   .ml-data-grid{grid-template-columns:1fr;}
@@ -166,16 +175,17 @@ footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px
   </button>
 </nav>
 
-<div class="nav-overlay" id="navOverlay"></div>
 <nav class="nav-drawer" id="navDrawer" aria-hidden="true">
-  <ul>
-    <li><a href="/#apropos">À propos</a></li>
-    <li><a href="/#expertises">Expertises</a></li>
-    <li><a href="/#infos">Infos pratiques</a></li>
-    <li><a href="/#avis">Avis</a></li>
-    <li><a href="/#articles">Articles</a></li>
-  </ul>
-  <a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="drawer-rdv">Prendre rendez-vous</a>
+  <div class="nav-drawer-inner">
+    <ul>
+      <li><a href="/#apropos">À propos</a></li>
+      <li><a href="/#expertises">Expertises</a></li>
+      <li><a href="/#infos">Infos pratiques</a></li>
+      <li><a href="/#avis">Avis</a></li>
+      <li><a href="/#articles">Articles</a></li>
+    </ul>
+    <a href="https://www.doctolib.fr/osteopathe/seclin/louise-messiant" target="_blank" rel="nofollow noopener" class="drawer-rdv">Prendre rendez-vous</a>
+  </div>
 </nav>
 
 <!-- EN-TÊTE -->
@@ -372,22 +382,20 @@ footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px
 <script>
 const burger = document.getElementById('navBurger');
 const drawer = document.getElementById('navDrawer');
-const overlay = document.getElementById('navOverlay');
 function closeDrawer(){
   burger.classList.remove('open');
   drawer.classList.remove('open');
-  overlay.classList.remove('open');
+  document.body.classList.remove('menu-open');
   burger.setAttribute('aria-expanded','false');
   drawer.setAttribute('aria-hidden','true');
 }
 burger.addEventListener('click', () => {
   const isOpen = drawer.classList.toggle('open');
   burger.classList.toggle('open');
-  overlay.classList.toggle('open');
+  document.body.classList.toggle('menu-open');
   burger.setAttribute('aria-expanded', isOpen);
   drawer.setAttribute('aria-hidden', !isOpen);
 });
-overlay.addEventListener('click', closeDrawer);
 drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
 </script>
 </body>
