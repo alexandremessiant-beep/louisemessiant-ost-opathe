@@ -149,7 +149,9 @@ section{padding:96px 60px;}
 .info-card-line{font-size:13px;color:rgba(255,255,255,.65);line-height:1.8;margin-bottom:6px;}
 .info-card-line strong{color:rgba(255,255,255,.9);font-weight:500;}
 .lieux-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
-.lieu-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:22px;}
+.lieu-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:16px;overflow:hidden;}
+.lieu-card-body{padding:22px;}
+.lieu-photo{width:100%;height:200px;object-fit:cover;object-position:center;display:block;}
 .lieu-name{font-family:'Lustria',serif;font-size:20px;color:var(--blanc);margin-bottom:8px;}
 .lieu-addr{font-size:13px;color:rgba(255,255,255,.6);line-height:1.7;}
 .lieu-badge{display:inline-block;background:rgba(155,187,138,.2);border:1px solid rgba(155,187,138,.3);color:var(--vert-l);padding:3px 12px;border-radius:50px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px;}
@@ -535,16 +537,21 @@ footer{background:var(--texte);color:rgba(255,255,255,.6);padding:56px 60px 32px
   </div>
   <div class="lieux-grid" style="margin-top:24px;">
     <div class="lieu-card reveal">
-      <div class="lieu-badge">Cabinet 1</div>
-      <div class="lieu-name">Seclin</div>
-      <p class="lieu-addr">40 Rue Roger Bouvry<br>59113 Seclin</p>
-      <a href="https://maps.google.com/?q=40+Rue+Roger+Bouvry+59113+Seclin" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:50px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(155,187,138,.5)';this.style.color='rgba(155,187,138,.9)'" onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.5)'">Voir sur Google Maps →</a>
+      <img src="/assets/photo3.png" alt="Cabinet d'ostéopathie de Louise Messiant à Seclin" class="lieu-photo">
+      <div class="lieu-card-body">
+        <div class="lieu-badge">Cabinet 1</div>
+        <div class="lieu-name">Seclin</div>
+        <p class="lieu-addr">40 Rue Roger Bouvry<br>59113 Seclin</p>
+        <a href="https://maps.google.com/?q=40+Rue+Roger+Bouvry+59113+Seclin" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:50px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(155,187,138,.5)';this.style.color='rgba(155,187,138,.9)'" onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.5)'">Voir sur Google Maps →</a>
+      </div>
     </div>
     <div class="lieu-card reveal">
-      <div class="lieu-badge">Cabinet 2</div>
-      <div class="lieu-name">Thumeries</div>
-      <p class="lieu-addr">Place Carlen<br>59639 Thumeries</p>
-      <a href="https://maps.google.com/?q=Place+Carlen+59639+Thumeries" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:50px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(155,187,138,.5)';this.style.color='rgba(155,187,138,.9)'" onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.5)'">Voir sur Google Maps →</a>
+      <div class="lieu-card-body">
+        <div class="lieu-badge">Cabinet 2</div>
+        <div class="lieu-name">Thumeries</div>
+        <p class="lieu-addr">Place Carlen<br>59639 Thumeries</p>
+        <a href="https://maps.google.com/?q=Place+Carlen+59639+Thumeries" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;font-size:12px;color:rgba(255,255,255,.5);text-decoration:none;border:1px solid rgba(255,255,255,.15);padding:6px 14px;border-radius:50px;transition:all .2s;" onmouseover="this.style.borderColor='rgba(155,187,138,.5)';this.style.color='rgba(155,187,138,.9)'" onmouseout="this.style.borderColor='rgba(255,255,255,.15)';this.style.color='rgba(255,255,255,.5)'">Voir sur Google Maps →</a>
+      </div>
     </div>
   </div>
 </section>
