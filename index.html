@@ -24,16 +24,62 @@
   "@context":"https://schema.org",
   "@type":"MedicalBusiness",
   "name":"Louise Messiant — Ostéopathe D.O.",
-  "description":"Ostéopathe diplômée D.O., spécialisée femme enceinte, sport, pédiatrique, myofasciale",
+  "description":"Ostéopathe diplômée D.O., spécialisée en ostéopathie de la femme enceinte, du sport, pédiatrique et myofasciale. Consultations à Seclin et Thumeries.",
   "url":"https://louisemessiant-osteopathe.fr",
-  "telephone":"0766012235",
+  "telephone":"+33766012235",
   "priceRange":"60€",
-  "address":[
-    {"@type":"PostalAddress","streetAddress":"40 Rue Roger Bouvry","addressLocality":"Seclin","postalCode":"59113","addressCountry":"FR"},
-    {"@type":"PostalAddress","streetAddress":"Place Carlen","addressLocality":"Thumeries","postalCode":"59639","addressCountry":"FR"}
+  "currenciesAccepted":"EUR",
+  "paymentAccepted":"Espèces, Chèque, Carte bancaire",
+  "image":"https://louisemessiant-osteopathe.fr/assets/photo2.jpg",
+  "logo":"https://louisemessiant-osteopathe.fr/assets/logo.png",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"40 Rue Roger Bouvry",
+    "addressLocality":"Seclin",
+    "postalCode":"59113",
+    "addressCountry":"FR"
+  },
+  "geo":{
+    "@type":"GeoCoordinates",
+    "latitude":50.5485,
+    "longitude":3.0341
+  },
+  "openingHoursSpecification":[
+    {
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens":"09:00",
+      "closes":"20:15"
+    },
+    {
+      "@type":"OpeningHoursSpecification",
+      "dayOfWeek":"Saturday",
+      "opens":"09:00",
+      "closes":"20:15"
+    }
   ],
-  "openingHours":"Mo-Sa 09:00-20:15",
-  "medicalSpecialty":"Osteopathic"
+  "medicalSpecialty":"Osteopathic",
+  "areaServed":[
+    {"@type":"City","name":"Seclin"},
+    {"@type":"City","name":"Thumeries"},
+    {"@type":"AdministrativeArea","name":"Métropole Européenne de Lille"}
+  ],
+  "employee":{
+    "@type":"Person",
+    "name":"Louise Messiant",
+    "jobTitle":"Ostéopathe D.O.",
+    "identifier":{
+      "@type":"PropertyValue",
+      "propertyID":"RPPS",
+      "value":"10111101670"
+    }
+  },
+  "sameAs":[
+    "https://www.doctolib.fr/osteopathe/seclin/louise-messiant",
+    "https://www.facebook.com/p/Louise-Messiant-Ost%C3%A9opathe-DO-61578897796859/",
+    "https://www.instagram.com/messiant.osteo/",
+    "https://www.linkedin.com/in/louise-messiant-8a71783a7/"
+  ]
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -356,6 +402,17 @@ body.menu-open .nav-mobile-rdv{display:none!important;}
   .footer-logo{font-size:17px;}
 }
 .nav-mobile-rdv{display:none;position:fixed;bottom:20px;left:50%;transform:translateX(-50%);z-index:200;white-space:nowrap;box-shadow:var(--sh-md);}
+
+/* ─── RGPD ─── */
+.rgpd-bar{position:fixed;bottom:0;left:0;right:0;z-index:300;background:var(--texte);color:rgba(255,255,255,.75);padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;font-size:12px;line-height:1.5;transform:translateY(100%);transition:transform .4s ease;box-shadow:0 -4px 24px rgba(0,0,0,.15);}
+.rgpd-bar.show{transform:translateY(0);}
+.rgpd-bar a{color:var(--vert-l);text-decoration:none;}
+.rgpd-bar a:hover{text-decoration:underline;}
+.rgpd-ok{background:var(--vert);color:#fff;border:none;padding:7px 18px;border-radius:50px;font-size:12px;font-weight:500;font-family:inherit;cursor:pointer;white-space:nowrap;transition:background .2s;flex-shrink:0;}
+.rgpd-ok:hover{background:var(--vert-f);}
+@media(max-width:480px){
+  .rgpd-bar{padding:14px 16px;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -734,7 +791,25 @@ body.menu-open .nav-mobile-rdv{display:none!important;}
   </div>
 </footer>
 
+<!-- RGPD -->
+<div class="rgpd-bar" id="rgpdBar" role="region" aria-label="Information cookies">
+  <span>Ce site n'utilise aucun cookie de traçage. Les polices d'écriture sont chargées depuis les serveurs de Google. <a href="/mentions-legales" aria-label="Mentions légales">En savoir plus</a>.</span>
+  <button class="rgpd-ok" id="rgpdOk" aria-label="Fermer">J'ai compris</button>
+</div>
+
 <script>
+// RGPD banner
+(function(){
+  if(!localStorage.getItem('rgpd_ok')){
+    var bar = document.getElementById('rgpdBar');
+    setTimeout(function(){ bar.classList.add('show'); }, 800);
+    document.getElementById('rgpdOk').addEventListener('click', function(){
+      bar.classList.remove('show');
+      localStorage.setItem('rgpd_ok','1');
+    });
+  }
+})();
+
 // Scroll reveal
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
